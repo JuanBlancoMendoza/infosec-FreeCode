@@ -1,6 +1,22 @@
 const express = require('express');
 const app = express();
 const helmet = require('helmet');
+app.use(helmet({
+  hidePoweredBy: {},
+  frameguard: { action: 'deny' },
+  xssFilter: {},
+  noSniff: {},
+  ieNoOpen: {},
+  hsts: { maxAge: 7776000, force: true },
+  dnsPrefetchControl: {},
+  noCache: {},
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'trusted-cdn.com']
+    },
+  }
+}));
 
 
 
