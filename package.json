@@ -7,15 +7,14 @@
 		"start": "node myApp.js"
 	},
 	"dependencies": {
-		"express": "^4.14.0",
-		"helmet": "3.21.3"
+		"express": "^4.18.2",
+		"helmet": "^3.21.3"
 	},
 	"keywords": [
 		"node",
 		"hyperdev",
 		"express",
-		"freecodecamp",
-    "helmet"
+		"freecodecamp"
 	],
 	"license": "MIT"
 }
